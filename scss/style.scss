@@ -89,24 +89,32 @@ body {
                 }
             }
             .menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 .list {
                     display: flex;
                     position: relative;
                     justify-content: center;
                     align-items: center;
                     z-index: 2;
-                    li {
+                    div {
+                        border-radius: 10px;
                         list-style: none;
-                        margin: 0 0 0 20px;
+                        height: 100%;
+                        transition: background-color 0.3s ease-in;
+                        &:hover {
+                            background-color:  #262563;
+                            cursor: pointer;
+                        }
                     }
                     .link {
+                        display: block;
+                        margin: 20px 10px;
                         color: whitesmoke;
                         text-decoration: none;
                         text-transform: uppercase;
                         font-size: 18px;
-                        &:hover {
-                            border: black 2px solid;
-                        }
                     }
                 }
             }
@@ -148,8 +156,10 @@ body {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        li {
-                            margin: 0 0 20px 0;
+                        div {
+                            &:hover {
+                                background-color: $color_1;
+                            }
                         }
                     }
                     &.active {
@@ -332,8 +342,8 @@ body {
                     height: 100%;
                 }
                 margin: 20px;
-                height: 100px;
-                width: 100px;
+                height: 150px;
+                width: 150px;
                 border: red 3px solid;
             }
         }
@@ -371,28 +381,31 @@ body {
                     justify-content: center;
                     align-items: center;
                     align-content: stretch;
+                    padding: 20px;
                     input {
-                        border-radius: 5px;
+                        height: 40px;
+                        width: 290px;
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin-bottom: 10px;
                     }
                     textarea {
                         resize: none;
                         border-radius: 10px;
+                        height: 160px;
+                        margin: 20px;
+                        padding: 10px;
+                        width: 290px;
                     }
                     .input-cont {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
                         align-items: center;
-                        margin: 10px 20px 20px;
+                        margin: 10px 20px 10px;
                         input {
                             margin-top: 10px;
                         }
-                    }
-                    .message {
-                        flex-basis: 90px;
-                        height: 70px;
-                        margin: 20px;
-                        padding: 10px;
                     }
                 }
                 .submit {
@@ -419,7 +432,11 @@ body {
         padding: 0 10px;
         color: $color_2;
         .title {
-            margin: 20px;
+            @extend %title;
+            font-size: 30px;
+            margin: 10px 0 0;
+            background-color: $color_1;
+            color: $color_2;
         }
         .links {
             padding: 10px;
@@ -429,7 +446,7 @@ body {
             }
         }
         .location {
-            padding: 20px;
+            padding: 10px 0 15px;
         }
     }
 }

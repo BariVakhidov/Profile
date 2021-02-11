@@ -4,7 +4,7 @@
   left: 0;
 }
 
-.about .about-container .title, .projects .container .title {
+.about .about-container .title, .projects .container .title, .footer .footer-container .title {
   color: #050442;
   background-color: white;
   padding: 20px;
@@ -117,6 +117,18 @@ body.lock {
           transform: scale(0);
 }
 
+.header .container .body .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .header .container .body .menu .list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,20 +143,26 @@ body.lock {
   z-index: 2;
 }
 
-.header .container .body .menu .list li {
+.header .container .body .menu .list div {
+  border-radius: 10px;
   list-style: none;
-  margin: 0 0 0 20px;
+  height: 100%;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.header .container .body .menu .list div:hover {
+  background-color: #262563;
+  cursor: pointer;
 }
 
 .header .container .body .menu .list .link {
+  display: block;
+  margin: 20px 10px;
   color: whitesmoke;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
-}
-
-.header .container .body .menu .list .link:hover {
-  border: black 2px solid;
 }
 
 @media (max-width: 767px) {
@@ -195,8 +213,8 @@ body.lock {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header .container .body .menu .list li {
-    margin: 0 0 20px 0;
+  .header .container .body .menu .list div:hover {
+    background-color: #050442;
   }
   .header .container .body .menu.active {
     top: 0;
@@ -459,8 +477,8 @@ body.lock {
 
 .projects .container .projects-wrapper .project {
   margin: 20px;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   border: red 3px solid;
 }
 
@@ -536,15 +554,24 @@ body.lock {
           align-items: center;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
+  padding: 20px;
 }
 
 .feedback .back .feedback-container .form .form-inputs input {
-  border-radius: 5px;
+  height: 40px;
+  width: 290px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .feedback .back .feedback-container .form .form-inputs textarea {
   resize: none;
   border-radius: 10px;
+  height: 160px;
+  margin: 20px;
+  padding: 10px;
+  width: 290px;
 }
 
 .feedback .back .feedback-container .form .form-inputs .input-cont {
@@ -561,19 +588,11 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 20px 20px;
+  margin: 10px 20px 10px;
 }
 
 .feedback .back .feedback-container .form .form-inputs .input-cont input {
   margin-top: 10px;
-}
-
-.feedback .back .feedback-container .form .form-inputs .message {
-  -ms-flex-preferred-size: 90px;
-      flex-basis: 90px;
-  height: 70px;
-  margin: 20px;
-  padding: 10px;
 }
 
 .feedback .back .feedback-container .form .submit {
@@ -610,7 +629,10 @@ body.lock {
 }
 
 .footer .footer-container .title {
-  margin: 20px;
+  font-size: 30px;
+  margin: 10px 0 0;
+  background-color: #050442;
+  color: white;
 }
 
 .footer .footer-container .links {
@@ -623,5 +645,5 @@ body.lock {
 }
 
 .footer .footer-container .location {
-  padding: 20px;
+  padding: 10px 0 15px;
 }
