@@ -100,17 +100,18 @@
         <div class="back">
           <div class="feedback-container">
             <div class="title">ОБРАТНАЯ СВЯЗЬ</div>
-            <div class="form">
+            <form action="https://formspree.io/f/mzbkwnep" method="POST" id="my-form" class="form">
               <div class="form-inputs">
                 <div class="input-cont">
-                  <input type="text" class="user-info" placeholder="ФИО">
-                  <input type="text" class="tel" placeholder="Телефон">
-                  <input type="text" class="mail" placeholder="E-mail">
+                  <input type="text" name="name" class="user-info" placeholder="ФИО">
+                  <input type="text" name="phone" class="tel" placeholder="Телефон">
+                  <input type="text" class="mail" name="replyto" placeholder="E-mail">
                 </div>
-              <textarea class="message" type="text" class="message" placeholder="Сообщение"></textarea>
+              <textarea name="message" id="message" class="message" type="text" placeholder="Сообщение"></textarea>
               </div>
-              <button class="submit">Отправить</button>
-            </div>
+              <button type="submit" id="submit" class="submit">Отправить</button>
+            </form>
+            <div id="status" class="status"></div>
           </div>
         </div>
       </section> 
@@ -141,6 +142,7 @@
       </div> 
       
     </footer> 
+    <script src="./js/form-script.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="

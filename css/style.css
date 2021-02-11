@@ -614,6 +614,13 @@ body.lock {
   }
 }
 
+.feedback .back .feedback-container .status {
+  padding: 10px;
+  margin: 10px;
+  color: #050442;
+  font-weight: bold;
+}
+
 .footer {
   background-color: #050442;
 }
