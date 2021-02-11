@@ -32,6 +32,7 @@ body {
         overflow: hidden;
     }
 }
+
 .header {
     position: fixed;
     @extend %wtopleft;
@@ -48,7 +49,7 @@ body {
         max-width: 1180px;
         margin: 0 auto;
         padding: 0 10px;
-        .body {
+        .header-body {
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -104,7 +105,7 @@ body {
                         height: 100%;
                         transition: background-color 0.3s ease-in;
                         &:hover {
-                            background-color:  #262563;
+                            background-color: #262563;
                             cursor: pointer;
                         }
                     }
@@ -172,7 +173,7 @@ body {
             }
         }
         @media (max-width: 767px) {
-            .body {
+            .header-body {
                 height: 50px;
                 .logo {
                     flex: 0 0 40px;
@@ -181,7 +182,7 @@ body {
         }
     }
 }
-.content {
+.content-main {
     padding: 80px 0 0;
     background-image: url("../images/back1.jpg");
     background-position: center;
@@ -209,14 +210,14 @@ body {
                 }
                 .name {
                     margin: 20px;
-                    align-self:center;
+                    align-self: center;
                     text-align: center;
                     font-family: Arial, Helvetica, sans-serif;
                     color: $color_1;
                     h1 {
-                    font-style: italic;
-                    font-weight: bold;
-                    font-size: 50px;
+                        font-style: italic;
+                        font-weight: bold;
+                        font-size: 50px;
                     }
                     p {
                         font-size: 16px;
@@ -244,14 +245,13 @@ body {
         .title {
             @extend %title;
             font-size: 30px;
-            
         }
         .download-profile {
             background-color: $color_1;
             color: $color_2;
             padding: 10px;
             &:hover {
-                background-color:  #262563;
+                background-color: #262563;
                 cursor: pointer;
             }
         }
@@ -311,12 +311,11 @@ body {
                     color: $color_2;
                     height: 50%;
                     width: 100%;
-                    
                 }
             }
             .download-profile {
                 margin-top: 10px;
-                background-color:$color_1;
+                background-color: $color_1;
                 color: $color_2;
             }
         }
@@ -375,29 +374,24 @@ body {
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                box-sizing: border-box;
                 .form-inputs {
                     background-color: $color_1;
                     border-radius: 10px;
                     display: flex;
                     flex-flow: row wrap;
+                    padding: 20px;
+                    box-sizing: border-box;
                     justify-content: center;
                     align-items: center;
-                    align-content: stretch;
-                    padding: 20px;
-                    input {
-                        height: 40px;
-                        width: 290px;
-                        border-radius: 10px;
-                        padding: 10px;
-                        margin-bottom: 10px;
-                    }
                     textarea {
+                        box-sizing: border-box;
                         resize: none;
                         border-radius: 10px;
                         height: 160px;
                         margin: 20px;
                         padding: 10px;
-                        width: 290px;
+                        width: 250px;
                     }
                     .input-cont {
                         display: flex;
@@ -406,7 +400,13 @@ body {
                         align-items: center;
                         margin: 10px 20px 10px;
                         input {
+                            box-sizing: border-box;
                             margin-top: 10px;
+                            height: 40px;
+                            width: 250px;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin-bottom: 10px;
                         }
                     }
                 }
@@ -418,9 +418,18 @@ body {
                     padding: 10px;
                     margin: 10px;
                 }
-                @media (max-width: 767px) { 
+                @media (max-width: 767px) {
                     .form-inputs {
                         margin: 20px;
+                        textarea {
+                            width: 100%;
+                        }
+                        .input-cont {
+                            width: 100%;
+                            input {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
