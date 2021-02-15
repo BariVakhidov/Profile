@@ -189,7 +189,7 @@ body {
     background-size: cover;
     .main-information {
         .background {
-            background-color: rgba($color_2, $alpha: 0.7);
+            background-color: rgba($color_2, $alpha: 0.8);
             .main-information-container {
                 @extend %cont;
                 padding: 100px 20px 0;
@@ -250,6 +250,10 @@ body {
             background-color: $color_1;
             color: $color_2;
             padding: 10px;
+            a {
+                text-decoration: none;
+                color: $color_2;
+            }
             &:hover {
                 background-color: #262563;
                 cursor: pointer;
