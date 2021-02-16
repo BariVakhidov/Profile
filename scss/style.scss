@@ -99,10 +99,12 @@ body {
                     justify-content: center;
                     align-items: center;
                     z-index: 2;
-                    div {
+                    a { 
+                        display: block;
                         border-radius: 10px;
                         list-style: none;
                         height: 100%;
+                        text-decoration: none;
                         transition: background-color 0.3s ease-in;
                         &:hover {
                             background-color: #262563;
@@ -113,7 +115,6 @@ body {
                         display: block;
                         margin: 20px 10px;
                         color: whitesmoke;
-                        text-decoration: none;
                         text-transform: uppercase;
                         font-size: 18px;
                     }
@@ -214,14 +215,16 @@ body {
                     text-align: center;
                     font-family: Arial, Helvetica, sans-serif;
                     color: $color_1;
-                    h1 {
+                    .fullname {
+                        margin: 10px 20px 10px;
                         font-style: italic;
                         font-weight: bold;
-                        font-size: 50px;
+                        font-size: 60px;
                     }
                     p {
-                        font-size: 16px;
-                        margin-top: 20px;
+                        font-weight: bolder ;
+                        font-size: 19px;
+                        margin-top: 10px;
                         font-weight: 540;
                     }
                 }
@@ -236,6 +239,7 @@ body {
 }
 .about {
     background: linear-gradient(90deg, white 50%, $color_1 50%);
+    box-shadow: 0px 4px 5px rgba(1, 27, 143, 0.2);
     .about-container {
         display: flex;
         flex-direction: column;
@@ -265,12 +269,24 @@ body {
             align-items: center;
             flex-flow: row wrap;
             .about-me {
-                padding: 50px;
+                box-sizing: border-box;
+                padding: 70px 50px 0px;
                 line-height: 20px;
                 color: $color_1;
                 width: 50%;
                 font-size: 20px;
                 font-weight: 510;
+                text-align: left;
+                p {
+                    margin-left: auto;
+                    margin-bottom: 10px;
+                    display: block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                
+                }
             }
             .abilities {
                 .abilities-title {
@@ -281,12 +297,22 @@ body {
                 display: flex;
                 flex-flow: column wrap;
                 align-items: center;
-                padding: 50px;
+                padding: 50px 10px 50px 50px;
                 color: $color_2;
                 width: 50%;
                 li {
                     font-style: italic;
-                    margin-top: 10px;
+                    margin-top: 15px;
+                    list-style: circle;
+                    font-size: 16px;
+                    &::marker {
+                        unicode-bidi: isolate;
+                        font-variant-numeric: tabular-nums;
+                        text-transform: none;
+                        text-indent: 0px !important;
+                        text-align: start !important;
+                        text-align-last: start !important;
+                    }
                 }
             }
         }
@@ -334,6 +360,7 @@ body {
         @extend %cont;
         .title {
             @extend %title;
+            margin-top: 70px;
             font-size: 30px;
         }
         .projects-wrapper {
@@ -386,9 +413,9 @@ body {
     background-position: center;
     background-size: cover;
     .back {
-        background-color: rgba($color_2, $alpha: 0.7);
+        background-color: rgba($color_2, $alpha: 0.8);
         .feedback-container {
-            padding: 50px 0;
+            padding: 70px 0 50px;
             @extend %cont;
             display: flex;
             flex-direction: column;

@@ -144,15 +144,17 @@ body.lock {
   z-index: 2;
 }
 
-.header .header-container .header-body .menu .list div {
+.header .header-container .header-body .menu .list a {
+  display: block;
   border-radius: 10px;
   list-style: none;
   height: 100%;
+  text-decoration: none;
   -webkit-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 
-.header .header-container .header-body .menu .list div:hover {
+.header .header-container .header-body .menu .list a:hover {
   background-color: #262563;
   cursor: pointer;
 }
@@ -161,7 +163,6 @@ body.lock {
   display: block;
   margin: 20px 10px;
   color: whitesmoke;
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
 }
@@ -286,15 +287,17 @@ body.lock {
   color: #050442;
 }
 
-.content-main .main-information .background .main-information-container .name h1 {
+.content-main .main-information .background .main-information-container .name .fullname {
+  margin: 10px 20px 10px;
   font-style: italic;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .content-main .main-information .background .main-information-container .name p {
-  font-size: 16px;
-  margin-top: 20px;
+  font-weight: bolder;
+  font-size: 19px;
+  margin-top: 10px;
   font-weight: 540;
 }
 
@@ -307,6 +310,8 @@ body.lock {
 .about {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #050442));
   background: linear-gradient(90deg, white 50%, #050442 50%);
+  -webkit-box-shadow: 0px 4px 5px rgba(1, 27, 143, 0.2);
+          box-shadow: 0px 4px 5px rgba(1, 27, 143, 0.2);
 }
 
 .about .about-container {
@@ -362,12 +367,29 @@ body.lock {
 }
 
 .about .about-container .flex-cont .about-me {
-  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 70px 50px 0px;
   line-height: 20px;
   color: #050442;
   width: 50%;
   font-size: 20px;
   font-weight: 510;
+  text-align: left;
+}
+
+.about .about-container .flex-cont .about-me p {
+  margin-left: auto;
+  margin-bottom: 10px;
+  display: block;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 .about .about-container .flex-cont .abilities {
@@ -381,7 +403,7 @@ body.lock {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px;
+  padding: 50px 10px 50px 50px;
   color: white;
   width: 50%;
 }
@@ -394,7 +416,19 @@ body.lock {
 
 .about .about-container .flex-cont .abilities li {
   font-style: italic;
-  margin-top: 10px;
+  margin-top: 15px;
+  list-style: circle;
+  font-size: 16px;
+}
+
+.about .about-container .flex-cont .abilities li::marker {
+  unicode-bidi: -webkit-isolate;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
 }
 
 @media (max-width: 767px) {
@@ -466,6 +500,7 @@ body.lock {
 }
 
 .projects .projects-container .title {
+  margin-top: 70px;
   font-size: 30px;
 }
 
@@ -532,11 +567,11 @@ body.lock {
 }
 
 .feedback .back {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .feedback .back .feedback-container {
-  padding: 50px 0;
+  padding: 70px 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
