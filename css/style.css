@@ -471,13 +471,16 @@ body.lock {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 50px 0;
+    padding: 50px 5px;
     color: white;
     height: 50%;
     width: 100%;
   }
+  .about .about-container .flex-cont .abilities ul {
+    margin-left: 30px;
+  }
   .about .about-container .download-profile {
-    margin-top: 10px;
+    margin: 10px 0 10px;
     background-color: #050442;
     color: white;
   }

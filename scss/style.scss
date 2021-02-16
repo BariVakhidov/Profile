@@ -337,14 +337,17 @@ body {
                     display: flex;
                     flex-flow: column wrap;
                     align-items: center;
-                    padding: 50px 0;
+                    padding: 50px 5px;
                     color: $color_2;
                     height: 50%;
                     width: 100%;
+                    ul {
+                        margin-left: 30px;
+                    }
                 }
             }
             .download-profile {
-                margin-top: 10px;
+                margin: 10px 0 10px;
                 background-color: $color_1;
                 color: $color_2;
             }
